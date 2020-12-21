@@ -28,9 +28,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'characters',
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
@@ -61,7 +63,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'dnd_project.wsgi.application'
 
-CORS_ORIGIN_WHITELIST = ['http://localhost:3000', 'https://localhost:3000']
+CORS_ORIGIN_WHITELIST = ['http://localhost:3000', 'https://localhost:3000', 'https://dylan-dnd-frontend.herokuapp.com']
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 

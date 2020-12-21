@@ -1,7 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
-from .models import User, Class, Race, Character
-from .serializers import UserSerializer, ClassSerializer, RaceSerializer, CharacterSerializer
+from .models import User, Class, Race, Character, Item
+from .serializers import UserSerializer, ClassSerializer, RaceSerializer, CharacterSerializer, ItemSerializer
 from rest_framework import viewsets
 # from rest_framwork_extensions.mixins import NestedViewSetMixin  (pip install drf-extensions)??
 
@@ -21,4 +21,8 @@ class RaceViewSet(viewsets.ModelViewSet):
 class CharacterViewSet(viewsets.ModelViewSet):
     queryset = Character.objects.all()
     serializer_class = CharacterSerializer
+
+class ItemViewSet(viewsets.ModelViewSet):
+    queryset = Item.objects.all()
+    serializer_class = ItemSerializer
     

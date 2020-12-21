@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User, Class, Race, Character
+from .models import User, Class, Race, Character, Item
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -23,5 +23,11 @@ class CharacterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Character
         fields = ('id', 'full_name', 'age', 'back_story', 'strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma', 'equipment', 'spells', 'race_id', 'class_id', 'user_id')
+
+class ItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Item 
+        fields = ('id', 'name', 'character_id')
+
 
 

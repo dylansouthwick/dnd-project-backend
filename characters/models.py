@@ -44,4 +44,11 @@ class Character(models.Model):
     def __str__(self):
         return f'{self.full_name}'
 
+class Item(models.Model):
+    name = models.CharField(max_length=200)
+    character_id = models.ForeignKey(Character, on_delete=models.CASCADE, related_name='items')
+
+    def __str__(self):
+        return f'{self.name}'
+
 
