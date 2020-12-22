@@ -3,10 +3,10 @@ from .views import UserViewSet, ClassViewSet, RaceViewSet, CharacterViewSet, Ite
 from django.urls import path, include
 
 router = DefaultRouter()
-router.register(r'users', UserViewSet, basename='users')
-router.register(r'classes', ClassViewSet, basename='classes')
-router.register(r'races', RaceViewSet, basename='races')
-router.register(r'characters', CharacterViewSet, basename='character')
-router.register(r'items', ItemViewSet, basename='items')
+router.register(r'users', UserViewSet)
+router.register(r'classes', ClassViewSet)
+router.register(r'races', RaceViewSet)
+router.register(r'characters', CharacterViewSet)
+router.register(r'items', ItemViewSet)
 urlpatterns = router.urls
 
