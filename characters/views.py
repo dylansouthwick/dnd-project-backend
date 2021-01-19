@@ -3,7 +3,7 @@ from django.shortcuts import render
 from .models import User, Class, Race, Character, Item
 from .serializers import UserSerializer, ClassSerializer, RaceSerializer, CharacterSerializer, ItemSerializer
 from rest_framework import viewsets
-# from rest_framwork_extensions.mixins import NestedViewSetMixin  (pip install drf-extensions)??
+# from rest_framwork_extensions.mixins import NestedViewSetMixin  (pip install drf-extensions)???
 
 
 class UserViewSet(viewsets.ModelViewSet):
